@@ -10,59 +10,61 @@
     <style>
         #one.tiles article {
             background: #2a2f4a !important;
-        }
-
-        #one.tiles article:nth-child(1),
-        #one.tiles article:nth-child(2),
-        #one.tiles article:nth-child(3),
-        #one.tiles article:nth-child(4) {
-            width: 50%;
-            min-height: 520px;
+            min-height: 430px;
         }
 
         #one.tiles article .image {
             display: none;
         }
 
-        #one.tiles article header.major {
-            position: relative;
-            transform: none;
-            top: auto;
-            left: auto;
+        #one.tiles article:before {
+            display: none !important;
+        }
+
+        #one.tiles article .tile-content {
             padding: 3em;
-            width: 100%;
+            position: relative;
+            z-index: 2;
         }
 
         #one.tiles article h3,
         #one.tiles article h4,
         #one.tiles article p,
         #one.tiles article li {
+            color: #ffffff !important;
+            opacity: 1 !important;
             text-transform: none !important;
             letter-spacing: normal !important;
         }
 
+        #one.tiles article h3 {
+            font-size: 1.4em;
+            margin-bottom: 1em;
+        }
+
+        #one.tiles article h4 {
+            font-size: 1em;
+            margin-top: 1.5em;
+            margin-bottom: 0.75em;
+        }
+
         #one.tiles article p,
         #one.tiles article li {
-            font-size: 1rem;
-            line-height: 1.7;
+            font-size: 0.95rem;
+            line-height: 1.6;
         }
 
         #one.tiles article ul {
-            margin-bottom: 1.5em;
+            margin-bottom: 1em;
         }
 
         #one.tiles article .actions {
             margin-top: 1.5em;
         }
 
-        @media screen and (max-width: 980px) {
-            #one.tiles article:nth-child(1),
-            #one.tiles article:nth-child(2),
-            #one.tiles article:nth-child(3),
-            #one.tiles article:nth-child(4) {
-                width: 100%;
-                min-height: auto;
-            }
+        #one.tiles article .button {
+            text-transform: none !important;
+            letter-spacing: normal !important;
         }
     </style>
 </head>
@@ -103,67 +105,44 @@
         <section id="one" class="tiles">
 
             <article>
-        <h3>SOLID Principles in Python</h3>
+                <div class="tile-content">
+                    <h3>SOLID Principles in Python</h3>
 
-            <p>
-            9-slide PowerPoint presentation, Python implementation
-            demonstrating SOLID principles and automated pytest tests.
-            </p>
-            
-            <h4>Summary</h4>
-            
-            <p>
-            This activity explored the SOLID principles of object-oriented
-            design and demonstrated how SOLID improves maintainability,
-            extensibility and code readability.
-            </p>
+                    <p>
+                        9-slide PowerPoint presentation, Python implementation demonstrating
+                        SOLID principles and automated unit tests using pytest.
+                    </p>
+
+                    <h4>Summary</h4>
+
+                    <p>
+                        This activity explored the SOLID principles of object-oriented design.
+                        I created a presentation explaining each principle and developed a small
+                        Python application to demonstrate how SOLID can improve maintainability,
+                        extensibility and code readability.
+                    </p>
+                </div>
             </article>
 
             <article>
-<h3>Learning & Reflection</h3>
+                <div class="tile-content">
+                    <h3>Learning, Reflection and Links</h3>
 
-<ul>
-    <li>Single Responsibility Principle</li>
-    <li>Open/Closed Principle</li>
-    <li>Dependency Inversion Principle</li>
-    <li>Loosely coupled and testable code</li>
-</ul>
+                    <h4>Key Learning</h4>
 
-<p>
-Implementing the example improved my understanding of how
-design decisions affect maintainability and future enhancements.
-</p>
-
-<a href="github-link" class="button small">
-    View Artefact
-</a>
-            </article>
-
-            <article>
-                <header class="major">
-                    <h3>Key Learning</h3>
                     <ul>
-                        <li>Single Responsibility Principle (SRP)</li>
-                        <li>Open/Closed Principle (OCP)</li>
-                        <li>Dependency Inversion Principle (DIP)</li>
-                        <li>Importance of loosely coupled and testable code</li>
+                        <li>Single Responsibility Principle</li>
+                        <li>Open/Closed Principle</li>
+                        <li>Dependency Inversion Principle</li>
+                        <li>Loosely coupled and testable code</li>
                         <li>Benefits of automated testing</li>
                     </ul>
-                </header>
-            </article>
 
-            <article>
-                <header class="major">
-                    <h3>Reflection and Links</h3>
                     <p>
-                        Prior to this activity I understood object-oriented programming concepts
-                        but had limited practical experience applying SOLID principles.
                         Implementing the example in Python helped me understand how design
-                        decisions affect maintainability and future enhancements.
-                    </p>
-                    <p>
-                        The accompanying unit tests reinforced the importance of designing
-                        classes that are easy to test and extend.
+                        decisions affect maintainability and future enhancements. The unit
+                        tests reinforced the importance of designing classes that are easy
+                        to test and extend.
                     </p>
 
                     <ul class="actions stacked">
@@ -183,21 +162,39 @@ design decisions affect maintainability and future enhancements.
                             </a>
                         </li>
                     </ul>
-                </header>
+                </div>
             </article>
 
             <article>
-                <header class="major">
-                    <h3><a href="landing.html" class="link">Unit 5</a></h3>
-                    <p>Coming soon</p>
-                </header>
+                <div class="tile-content">
+                    <h3>Second Demo</h3>
+                    <p>
+                        Add your second artefact or demo for the module here.
+                    </p>
+                </div>
             </article>
 
             <article>
-                <header class="major">
-                    <h3><a href="landing.html" class="link">Unit 6</a></h3>
-                    <p>Coming soon</p>
-                </header>
+                <div class="tile-content">
+                    <h3>Third Demo</h3>
+                    <p>
+                        Add your third artefact or assignment demo here.
+                    </p>
+                </div>
+            </article>
+
+            <article>
+                <div class="tile-content">
+                    <h3>Unit 5</h3>
+                    <p>Coming soon.</p>
+                </div>
+            </article>
+
+            <article>
+                <div class="tile-content">
+                    <h3>Unit 6</h3>
+                    <p>Coming soon.</p>
+                </div>
             </article>
 
         </section>
