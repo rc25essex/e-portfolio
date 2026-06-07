@@ -1,63 +1,222 @@
-<article>
-    <div class="tile-content">
-        <h3>Structural Design Patterns</h3>
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Reena Chaudhry Portfolio</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 
-        <p>
-            Seminar presentation and Python implementation demonstrating
-            Structural Design Patterns.
-        </p>
+    <style>
+        #banner {
+            min-height: 0 !important;
+            height: auto !important;
+            padding: 1.25em 0 1em 0 !important;
+        }
 
-        <h4>Summary</h4>
+        #banner .inner {
+            text-align: center;
+        }
 
-        <p>
-            This artefact builds upon the Structural Design Pattern concepts
-            introduced in Unit 4. A coffee ordering system was developed using
-            the Decorator and Composite patterns to demonstrate how functionality
-            can be extended without modifying existing code and how individual
-            objects can be composed into larger structures.
-        </p>
-    </div>
-</article>
+        #banner h1 {
+            font-size: 1.5em !important;
+            margin: 0 !important;
+        }
 
-<article>
-    <div class="tile-content">
-        <h3>Learning & Reflection</h3>
+        #one.tiles article {
+            background: #2a2f4a !important;
+            min-height: auto !important;
+            height: auto !important;
+            padding: 0 !important;
+            overflow: visible !important;
+            display: flex;
+            align-items: flex-start;
+        }
 
-        <h4>Key Learning</h4>
+        #one.tiles article .image,
+        #one.tiles article:before,
+        #one.tiles article:after {
+            display: none !important;
+        }
 
-        <ul>
-            <li>Decorator Pattern</li>
-            <li>Composite Pattern</li>
-            <li>Structural Design Patterns</li>
-            <li>Object Composition</li>
-            <li>Extensible Software Design</li>
+        #one.tiles article .tile-content {
+            width: 100%;
+            padding: 1.75em 2.25em;
+            position: relative !important;
+            z-index: 5;
+            transform: none !important;
+        }
+
+        #one.tiles article h3,
+        #one.tiles article h4,
+        #one.tiles article p,
+        #one.tiles article li {
+            color: #ffffff !important;
+            opacity: 1 !important;
+            text-transform: none !important;
+            letter-spacing: normal !important;
+        }
+
+        #one.tiles article h3 {
+            font-size: 1.55em !important;
+            margin-bottom: 0.65em;
+        }
+
+        #one.tiles article h4 {
+            font-size: 1.05em !important;
+            margin-top: 1em;
+            margin-bottom: 0.45em;
+        }
+
+        #one.tiles article p,
+        #one.tiles article li {
+            font-size: 1rem;
+            line-height: 1.55;
+        }
+
+        #one.tiles article ul {
+            margin-bottom: 0.9em;
+        }
+
+        #one.tiles article .actions,
+        #one.tiles article .actions li,
+        #one.tiles article .button {
+            position: relative;
+            z-index: 20;
+        }
+
+        #one.tiles article .button {
+            font-size: 0.95rem !important;
+            padding: 0.7em 1.3em !important;
+            min-width: 150px;
+            text-align: center;
+            text-transform: none !important;
+            letter-spacing: normal !important;
+        }
+    </style>
+</head>
+
+<body class="is-preload">
+
+<div id="wrapper">
+
+    <header id="header" class="alt">
+        <a href="index.html" class="logo"><strong>Reena</strong> <span>Chaudhry</span></a>
+        <nav>
+            <a href="#menu">Menu</a>
+        </nav>
+    </header>
+
+    <nav id="menu">
+        <ul class="links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="landing.html">Landing</a></li>
+            <li><a href="generic.html">Generic</a></li>
+            <li><a href="elements.html">Elements</a></li>
         </ul>
+    </nav>
 
-        <p>
-            Developing the coffee ordering system improved my understanding of
-            how structural design patterns can increase flexibility and
-            maintainability. The activity demonstrated how behaviour can be
-            extended through decoration and how complex object hierarchies can
-            be represented through composition.
-        </p>
+    <section id="banner">
+        <div class="inner">
+            <h1>Units 1 - 6 Artefacts</h1>
+        </div>
+    </section>
 
-        <ul class="actions">
-            <li>
-                <a href="YOUR_PRESENTATION_LINK"
-                   class="button small"
-                   target="_blank">
-                    Presentation
-                </a>
-            </li>
+    <div id="main">
 
-            <li>
-                <a href="YOUR_SOURCE_CODE_LINK"
-                   class="button small"
-                   target="_blank">
-                    Source Code
-                </a>
-            </li>
-        </ul>
+        <section id="one" class="tiles">
+
+            <article>
+                <div class="tile-content">
+                    <h3>SOLID Principles in Python</h3>
+
+                    <p>
+                        9-slide PowerPoint presentation, Python implementation demonstrating
+                        SOLID principles and automated unit tests using pytest.
+                    </p>
+
+                    <h4>Summary</h4>
+                    
+                    <p>
+                        This artefact builds on concepts introduced in Unit 1 (Object-Oriented
+                        Programming) and Unit 2 (SOLID Principles). A presentation was created
+                        to explain the core SOLID principles alongside a Python implementation
+                        demonstrating how good object-oriented design can improve maintainability,
+                        extensibility and code readability. Automated unit tests using pytest
+                        were also included to verify behaviour and demonstrate the importance of
+                        testable software design.
+                    </p>
+                </div>
+            </article>
+
+            <article>
+                <div class="tile-content">
+                    <h3>Learning & Reflection</h3>
+
+                    <h4>Key Learning</h4>
+
+                    <ul>
+                        <li>Single Responsibility Principle</li>
+                        <li>Open/Closed Principle</li>
+                        <li>Dependency Inversion Principle</li>
+                        <li>Loosely coupled and testable code</li>
+                        <li>Benefits of automated testing</li>
+                    </ul>
+
+                    <p>
+                        Implementing the example in Python helped me understand how design
+                        decisions affect maintainability and future enhancements. The unit
+                        tests reinforced the importance of designing classes that are easy
+                        to test and extend.
+                    </p>
+
+                    <ul class="actions">
+                        <li>
+                            <a href="https://github.com/rc25essex/e-portfolio/raw/portfolio-dev/artefacts/solid-principles/solid_principles_shapes_project.pptx" class="button small" target="_blank">
+                                Presentation
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/rc25essex/e-portfolio/blob/portfolio-dev/artefacts/solid-principles/shapes.py" class="button small" target="_blank">
+                                Source Code
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/rc25essex/e-portfolio/blob/portfolio-dev/artefacts/solid-principles/test_shapes.py" class="button small" target="_blank">
+                                Unit Tests
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </article>
+
+            <article>
+                <div class="tile-content">
+                    <h3>Second Demo</h3>
+                    <p>Add your second artefact or demo for the module here.</p>
+                </div>
+            </article>
+
+            <article>
+                <div class="tile-content">
+                    <h3>Third Demo</h3>
+                    <p>Add your third artefact or assignment demo here.</p>
+                </div>
+            </article>
+
+        </section>
 
     </div>
-</article>
+
+</div>
+
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/jquery.scrolly.min.js"></script>
+<script src="assets/js/jquery.scrollex.min.js"></script>
+<script src="assets/js/browser.min.js"></script>
+<script src="assets/js/breakpoints.min.js"></script>
+<script src="assets/js/util.js"></script>
+<script src="assets/js/main.js"></script>
+
+</body>
+</html>
