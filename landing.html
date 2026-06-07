@@ -9,12 +9,19 @@
 
     <style>
         #banner {
-            min-height: 220px !important;
-            padding: 3em 0 2em 0 !important;
+            min-height: 120px !important;
+            padding: 1.5em 0 1em 0 !important;
         }
 
         #banner h1 {
-            font-size: 2.4em !important;
+            font-size: 1.9em !important;
+            margin-bottom: 0.4em !important;
+        }
+
+        #banner .content p {
+            text-transform: none !important;
+            letter-spacing: normal !important;
+            font-size: 1rem !important;
         }
 
         #one.tiles article {
@@ -31,7 +38,7 @@
         }
 
         #one.tiles article .tile-content {
-            padding: 2.5em;
+            padding: 2em 2.5em;
             position: static !important;
             transform: none !important;
         }
@@ -46,10 +53,21 @@
             letter-spacing: normal !important;
         }
 
+        #one.tiles article h3 {
+            font-size: 1.8em !important;
+            margin-bottom: 0.8em;
+        }
+
+        #one.tiles article h4 {
+            font-size: 1.15em !important;
+            margin-top: 1.2em;
+            margin-bottom: 0.6em;
+        }
+
         #one.tiles article p,
         #one.tiles article li {
-            font-size: 0.95rem;
-            line-height: 1.6;
+            font-size: 1.05rem;
+            line-height: 1.7;
         }
 
         #one.tiles article .button {
@@ -97,12 +115,14 @@
             <article>
                 <div class="tile-content">
                     <h3>SOLID Principles in Python</h3>
+
                     <p>
                         9-slide PowerPoint presentation, Python implementation demonstrating
                         SOLID principles and automated unit tests using pytest.
                     </p>
 
                     <h4>Summary</h4>
+
                     <p>
                         This activity explored the SOLID principles of object-oriented design.
                         I created a presentation explaining each principle and developed a small
@@ -117,6 +137,7 @@
                     <h3>Learning, Reflection and Links</h3>
 
                     <h4>Key Learning</h4>
+
                     <ul>
                         <li>Single Responsibility Principle</li>
                         <li>Open/Closed Principle</li>
