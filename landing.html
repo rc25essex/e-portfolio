@@ -1,181 +1,225 @@
 <!DOCTYPE HTML>
-<!--
-	Forty by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
 <html>
-	<head>
-		<title>Forty by HTML5 UP</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
+<head>
+    <title>Reena Chaudhry Portfolio</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+    <style>
+        #one.tiles article {
+            background: #2a2f4a !important;
+        }
 
-				<!-- Header -->
-					<header id="header" class="alt">
-						<a href="index.html" class="logo"><strong>Reena</strong> <span>Chaudhry</span></a>
-						<nav>
-							<a href="#menu">Menu</a>
-						</nav>
-					</header>
+        #one.tiles article:nth-child(1),
+        #one.tiles article:nth-child(2),
+        #one.tiles article:nth-child(3),
+        #one.tiles article:nth-child(4) {
+            width: 50%;
+            min-height: 520px;
+        }
 
-				<!-- Menu -->
-					<nav id="menu">
-						<ul class="links">
-							<li><a href="index.html">Home</a></li>
-							<li><a href="landing.html">Landing</a></li>
-							<li><a href="generic.html">Generic</a></li>
-							<li><a href="elements.html">Elements</a></li>
-						</ul>
-						<ul class="actions stacked">
-							<li><a href="#" class="button primary fit">Get Started</a></li>
-							<li><a href="#" class="button fit">Log In</a></li>
-						</ul>
-					</nav>
+        #one.tiles article .image {
+            display: none;
+        }
 
-				<!-- Banner -->
-					<section id="banner" class="major">
-						<div class="inner">
-							<header class="major">
-								<h1>Hi, my name is Forty</h1>
-							</header>
-						</div>
-					</section>
+        #one.tiles article header.major {
+            position: relative;
+            transform: none;
+            top: auto;
+            left: auto;
+            padding: 3em;
+            width: 100%;
+        }
 
-				<!-- Main -->
-					<div id="main">
+        #one.tiles article h3,
+        #one.tiles article h4,
+        #one.tiles article p,
+        #one.tiles article li {
+            text-transform: none !important;
+            letter-spacing: normal !important;
+        }
 
-						<!-- One -->
-							<section id="one" class="tiles">
-<article>
-    <span class="image">
-        <img src="images/pic01.jpg" alt="" />
-    </span>
-    <header class="major">
-        <h3>SOLID Principles Artefact</h3>
-        <p>Unit 1 & 2</p>
+        #one.tiles article p,
+        #one.tiles article li {
+            font-size: 1rem;
+            line-height: 1.7;
+        }
 
-        <h4>Artefacts</h4>
-        <ul>
-            <li>9-slide PowerPoint presentation</li>
-            <li>Python implementation demonstrating SOLID principles</li>
-            <li>Automated unit tests using pytest</li>
+        #one.tiles article ul {
+            margin-bottom: 1.5em;
+        }
+
+        #one.tiles article .actions {
+            margin-top: 1.5em;
+        }
+
+        @media screen and (max-width: 980px) {
+            #one.tiles article:nth-child(1),
+            #one.tiles article:nth-child(2),
+            #one.tiles article:nth-child(3),
+            #one.tiles article:nth-child(4) {
+                width: 100%;
+                min-height: auto;
+            }
+        }
+    </style>
+</head>
+
+<body class="is-preload">
+
+<div id="wrapper">
+
+    <header id="header" class="alt">
+        <a href="index.html" class="logo"><strong>Reena</strong> <span>Chaudhry</span></a>
+        <nav>
+            <a href="#menu">Menu</a>
+        </nav>
+    </header>
+
+    <nav id="menu">
+        <ul class="links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="landing.html">Landing</a></li>
+            <li><a href="generic.html">Generic</a></li>
+            <li><a href="elements.html">Elements</a></li>
         </ul>
-    </header>
-</article>
+    </nav>
 
-<article>
-    <span class="image">
-        <img src="images/pic02.jpg" alt="" />
-    </span>
-    <header class="major">
-        <h3>Summary</h3>
-        <p>
-            This activity explored the SOLID principles of object-oriented design.
-            I created a presentation explaining each principle and developed a small
-            Python application to demonstrate how SOLID can improve maintainability,
-            extensibility and code readability.
-        </p>
-        <p>
-            Unit tests were included to verify the behaviour of the implementation
-            and to demonstrate testability as a key benefit of good design.
-        </p>
-    </header>
-</article>
+    <section id="banner" class="major">
+        <div class="inner">
+            <header class="major">
+                <h1>Advanced Object-Oriented Design and Programming Module</h1>
+            </header>
+            <div class="content">
+                <p>Units 1 - 6</p>
+            </div>
+        </div>
+    </section>
 
-<article>
-    <span class="image">
-        <img src="images/pic03.jpg" alt="" />
-    </span>
-    <header class="major">
-        <h3>Key Learning</h3>
-        <ul>
-            <li>Single Responsibility Principle (SRP)</li>
-            <li>Open/Closed Principle (OCP)</li>
-            <li>Dependency Inversion Principle (DIP)</li>
-            <li>Importance of loosely coupled and testable code</li>
-            <li>Benefits of automated testing</li>
-        </ul>
-    </header>
-</article>
+    <div id="main">
 
-<article>
-    <span class="image">
-        <img src="images/pic04.jpg" alt="" />
-    </span>
-    <header class="major">
-        <h3>Reflection & Links</h3>
-        <p>
-            Prior to this activity I understood object-oriented programming concepts
-            but had limited practical experience applying SOLID principles.
-            Implementing the example in Python helped me understand how design
-            decisions affect maintainability and future enhancements.
-        </p>
-        <p>
-            The accompanying unit tests reinforced the importance of designing
-            classes that are easy to test and extend.
-        </p>
+        <section id="one" class="tiles">
 
-        <ul class="actions stacked">
-            <li><a href="YOUR_POWERPOINT_LINK" class="button small" target="_blank">Presentation</a></li>
-            <li><a href="YOUR_SOURCE_CODE_LINK" class="button small" target="_blank">Source Code</a></li>
-            <li><a href="YOUR_UNIT_TEST_LINK" class="button small" target="_blank">Unit Tests</a></li>
-        </ul>
-    </header>
-</article>
-								<article>
-									<span class="image">
-										<img src="images/pic05.jpg" alt="" />
-									</span>
-									<header class="major">
-										<h3><a href="landing.html" class="link">Unit 5</a></h3>
-										<p>Ipsum dolor sit amet</p>
-									</header>
-								</article>
-								<article>
-									<span class="image">
-										<img src="images/pic06.jpg" alt="" />
-									</span>
-									<header class="major">
-										<h3><a href="landing.html" class="link">Unit 6</a></h3>
-										<p>Feugiat amet tempus</p>
-									</header>
-								</article>
-							</section>
+            <article>
+                <header class="major">
+                    <h3>SOLID Principles in Python</h3>
+                    <p>Unit 1 & 2 Artefact</p>
 
-						<!-- Two -->
-							<section id="two">
-								<div class="inner">
-									<header class="major">
-										<h2>Massa libero</h2>
-									</header>
-									<p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus pharetra. Pellentesque condimentum sem. In efficitur ligula tate urna. Maecenas laoreet massa vel lacinia pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus amet pharetra et feugiat tempus.</p>
-									<ul class="actions">
-										<li><a href="landing.html" class="button next">View Unit 7 -12</a></li>
-									</ul>
-								</div>
-							</section>
+                    <h4>Artefacts</h4>
+                    <ul>
+                        <li>9-slide PowerPoint presentation</li>
+                        <li>Python implementation demonstrating SOLID principles</li>
+                        <li>Automated unit tests using pytest</li>
+                    </ul>
+                </header>
+            </article>
 
-					</div>
+            <article>
+                <header class="major">
+                    <h3>Summary</h3>
+                    <p>
+                        This activity explored the SOLID principles of object-oriented design.
+                        I created a presentation explaining each principle and developed a small
+                        Python application to demonstrate how SOLID can improve maintainability,
+                        extensibility and code readability.
+                    </p>
+                    <p>
+                        Unit tests were included to verify the behaviour of the implementation
+                        and to demonstrate testability as a key benefit of good design.
+                    </p>
+                </header>
+            </article>
 
+            <article>
+                <header class="major">
+                    <h3>Key Learning</h3>
+                    <ul>
+                        <li>Single Responsibility Principle (SRP)</li>
+                        <li>Open/Closed Principle (OCP)</li>
+                        <li>Dependency Inversion Principle (DIP)</li>
+                        <li>Importance of loosely coupled and testable code</li>
+                        <li>Benefits of automated testing</li>
+                    </ul>
+                </header>
+            </article>
 
+            <article>
+                <header class="major">
+                    <h3>Reflection and Links</h3>
+                    <p>
+                        Prior to this activity I understood object-oriented programming concepts
+                        but had limited practical experience applying SOLID principles.
+                        Implementing the example in Python helped me understand how design
+                        decisions affect maintainability and future enhancements.
+                    </p>
+                    <p>
+                        The accompanying unit tests reinforced the importance of designing
+                        classes that are easy to test and extend.
+                    </p>
 
-			</div>
+                    <ul class="actions stacked">
+                        <li>
+                            <a href="YOUR_POWERPOINT_LINK" class="button small" target="_blank">
+                                Presentation
+                            </a>
+                        </li>
+                        <li>
+                            <a href="YOUR_SOURCE_CODE_LINK" class="button small" target="_blank">
+                                Source Code
+                            </a>
+                        </li>
+                        <li>
+                            <a href="YOUR_UNIT_TEST_LINK" class="button small" target="_blank">
+                                Unit Tests
+                            </a>
+                        </li>
+                    </ul>
+                </header>
+            </article>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+            <article>
+                <header class="major">
+                    <h3><a href="landing.html" class="link">Unit 5</a></h3>
+                    <p>Coming soon</p>
+                </header>
+            </article>
 
-	</body>
+            <article>
+                <header class="major">
+                    <h3><a href="landing.html" class="link">Unit 6</a></h3>
+                    <p>Coming soon</p>
+                </header>
+            </article>
+
+        </section>
+
+        <section id="two">
+            <div class="inner">
+                <header class="major">
+                    <h2>Additional Artefacts</h2>
+                </header>
+                <p>
+                    Further artefacts for Units 5 and 6 will be added as the module progresses.
+                </p>
+                <ul class="actions">
+                    <li><a href="landing.html" class="button next">View Unit 7 - 12</a></li>
+                </ul>
+            </div>
+        </section>
+
+    </div>
+
+</div>
+
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/jquery.scrolly.min.js"></script>
+<script src="assets/js/jquery.scrollex.min.js"></script>
+<script src="assets/js/browser.min.js"></script>
+<script src="assets/js/breakpoints.min.js"></script>
+<script src="assets/js/util.js"></script>
+<script src="assets/js/main.js"></script>
+
+</body>
 </html>
