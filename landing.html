@@ -11,11 +11,15 @@
         #banner {
             min-height: 0 !important;
             height: auto !important;
-            padding: 2em 0 1em 0 !important;
+            padding: 1.25em 0 1em 0 !important;
+        }
+
+        #banner .inner {
+            text-align: center;
         }
 
         #banner h1 {
-            font-size: 1.6em !important;
+            font-size: 1.5em !important;
             margin: 0 !important;
         }
 
@@ -25,16 +29,21 @@
             height: auto !important;
             padding: 0 !important;
             overflow: visible !important;
+            display: flex;
+            align-items: flex-start;
         }
 
         #one.tiles article .image,
-        #one.tiles article:before {
+        #one.tiles article:before,
+        #one.tiles article:after {
             display: none !important;
         }
 
         #one.tiles article .tile-content {
-            padding: 2em 2.5em;
-            position: static !important;
+            width: 100%;
+            padding: 1.75em 2.25em;
+            position: relative !important;
+            z-index: 5;
             transform: none !important;
         }
 
@@ -49,25 +58,38 @@
         }
 
         #one.tiles article h3 {
-            font-size: 1.7em !important;
-            margin-bottom: 0.7em;
+            font-size: 1.55em !important;
+            margin-bottom: 0.65em;
         }
 
         #one.tiles article h4 {
-            font-size: 1.15em !important;
-            margin-top: 1.2em;
-            margin-bottom: 0.6em;
+            font-size: 1.05em !important;
+            margin-top: 1em;
+            margin-bottom: 0.45em;
         }
 
         #one.tiles article p,
         #one.tiles article li {
-            font-size: 1.08rem;
-            line-height: 1.65;
+            font-size: 1rem;
+            line-height: 1.55;
+        }
+
+        #one.tiles article ul {
+            margin-bottom: 0.9em;
+        }
+
+        #one.tiles article .actions,
+        #one.tiles article .actions li,
+        #one.tiles article .button {
+            position: relative;
+            z-index: 20;
         }
 
         #one.tiles article .button {
             font-size: 0.95rem !important;
-            padding: 0.65em 1.2em !important;
+            padding: 0.7em 1.3em !important;
+            min-width: 150px;
+            text-align: center;
             text-transform: none !important;
             letter-spacing: normal !important;
         }
@@ -126,7 +148,7 @@
 
             <article>
                 <div class="tile-content">
-                    <h3>Learning, Reflection and Links</h3>
+                    <h3>Learning & Reflection</h3>
 
                     <h4>Key Learning</h4>
 
@@ -147,7 +169,7 @@
 
                     <ul class="actions stacked">
                         <li>
-                            <a href="https://github.com/rc25essex/e-portfolio/blob/portfolio-dev/artefacts/solid-principles/solid_principles_shapes_project.pptx" class="button small" target="_blank">
+                            <a href="https://github.com/rc25essex/e-portfolio/raw/portfolio-dev/artefacts/solid-principles/solid_principles_shapes_project.pptx" class="button small" target="_blank">
                                 Presentation
                             </a>
                         </li>
