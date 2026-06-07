@@ -23,18 +23,21 @@
             margin: 0 !important;
         }
 
+        #one.tiles {
+            display: flex !important;
+            flex-wrap: wrap !important;
+            align-items: stretch !important;
+        }
+
         #one.tiles article {
             background: #2a2f4a !important;
-            min-height: auto !important;
+            width: 50% !important;
+            min-height: 500px !important;
             height: auto !important;
             padding: 0 !important;
             overflow: visible !important;
-            min-height: 450px !important;
-            .actions {
-                margin-top: auto;
-            }
-            display: flex;
-            align-items: flex-start;
+            display: flex !important;
+            align-items: stretch !important;
         }
 
         #one.tiles article .image,
@@ -49,6 +52,8 @@
             position: relative !important;
             z-index: 5;
             transform: none !important;
+            display: flex;
+            flex-direction: column;
         }
 
         #one.tiles article h3,
@@ -82,6 +87,10 @@
             margin-bottom: 0.9em;
         }
 
+        #one.tiles article .actions {
+            margin-top: auto !important;
+        }
+
         #one.tiles article .actions,
         #one.tiles article .actions li,
         #one.tiles article .button {
@@ -96,6 +105,13 @@
             text-align: center;
             text-transform: none !important;
             letter-spacing: normal !important;
+        }
+
+        @media screen and (max-width: 736px) {
+            #one.tiles article {
+                width: 100% !important;
+                min-height: auto !important;
+            }
         }
     </style>
 </head>
@@ -140,7 +156,7 @@
                     </p>
 
                     <h4>Summary</h4>
-                    
+
                     <p>
                         This artefact builds on concepts introduced in Unit 1 (Object-Oriented
                         Programming) and Unit 2 (SOLID Principles). A presentation was created
@@ -194,59 +210,59 @@
                 </div>
             </article>
 
-<article>
-    <div class="tile-content">
-        <h3>Structural Design Patterns</h3>
+            <article>
+                <div class="tile-content">
+                    <h3>Structural Design Patterns</h3>
 
-        <p>
-            Seminar presentation and Python implementation demonstrating
-            the Decorator and Composite patterns.
-        </p>
+                    <p>
+                        Seminar presentation and Python implementation demonstrating
+                        the Decorator and Composite patterns.
+                    </p>
 
-        <h4>Summary</h4>
+                    <h4>Summary</h4>
 
-        <p>
-            This artefact builds on Structural Design Pattern concepts introduced
-            in Unit 4. A coffee ordering system was developed to show how objects
-            can be composed and extended without modifying existing code.
-        </p>
-    </div>
-</article>
+                    <p>
+                        This artefact builds on Structural Design Pattern concepts introduced
+                        in Unit 4. A coffee ordering system was developed to show how objects
+                        can be composed and extended without modifying existing code.
+                    </p>
+                </div>
+            </article>
 
-<article>
-    <div class="tile-content">
-        <h3>Learning & Reflection</h3>
+            <article>
+                <div class="tile-content">
+                    <h3>Learning & Reflection</h3>
 
-        <h4>Key Learning</h4>
+                    <h4>Key Learning</h4>
 
-        <ul>
-            <li>Decorator Pattern</li>
-            <li>Composite Pattern</li>
-            <li>Structural Design Patterns</li>
-            <li>Object Composition</li>
-            <li>Extensible Software Design</li>
-        </ul>
+                    <ul>
+                        <li>Decorator Pattern</li>
+                        <li>Composite Pattern</li>
+                        <li>Structural Design Patterns</li>
+                        <li>Object Composition</li>
+                        <li>Extensible Software Design</li>
+                    </ul>
 
-        <p>
-            Developing the coffee ordering system improved my understanding of
-            how structural patterns support flexible and maintainable software
-            design through decoration and composition.
-        </p>
+                    <p>
+                        Developing the coffee ordering system improved my understanding of
+                        how structural patterns support flexible and maintainable software
+                        design through decoration and composition.
+                    </p>
 
-        <ul class="actions">
-            <li>
-                <a href="YOUR_PRESENTATION_LINK" class="button small" target="_blank">
-                    Presentation
-                </a>
-            </li>
-            <li>
-                <a href="YOUR_SOURCE_CODE_LINK" class="button small" target="_blank">
-                    Source Code
-                </a>
-            </li>
-        </ul>
-    </div>
-</article>
+                    <ul class="actions">
+                        <li>
+                            <a href="YOUR_PRESENTATION_LINK" class="button small" target="_blank">
+                                Presentation
+                            </a>
+                        </li>
+                        <li>
+                            <a href="YOUR_SOURCE_CODE_LINK" class="button small" target="_blank">
+                                Source Code
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </article>
 
         </section>
 
