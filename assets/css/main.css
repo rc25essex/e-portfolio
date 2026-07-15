@@ -3422,11 +3422,11 @@ input, select, textarea {
 					text-transform: uppercase;
 				}
 
-		#banner.major {
-			height: 75vh;
-			min-height: 30em;
-			max-height: 50em;
-		}
+#banner.major {
+    height: 50vh;
+    min-height: 22em;
+    max-height: 32em;
+}
 
 			#banner.major.alt {
 				opacity: 0.75;
