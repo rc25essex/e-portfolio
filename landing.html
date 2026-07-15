@@ -1,148 +1,287 @@
 <!DOCTYPE HTML>
-<!--
-	Forty by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
 <html>
-	<head>
-		<title>Forty by HTML5 UP</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
+<head>
+    <title>Reena Chaudhry Portfolio</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+    <style>
+        #banner {
+            min-height: 0 !important;
+            height: auto !important;
+            padding: 1.25em 0 1em 0 !important;
+        }
 
-				<!-- Header -->
-					<header id="header" class="alt">
-						<a href="index.html" class="logo"><strong>Reena</strong> <span>Chaudhry</span></a>
-						<nav>
-							<a href="#menu">Menu</a>
-						</nav>
-					</header>
+        #banner .inner {
+            text-align: center;
+        }
 
-				<!-- Menu -->
-					<nav id="menu">
-						<ul class="links">
-							<li><a href="index.html">Home</a></li>
-							<li><a href="landing.html">Landing</a></li>
-							<li><a href="generic.html">Generic</a></li>
-							<li><a href="elements.html">Elements</a></li>
-						</ul>
-						<ul class="actions stacked">
-							<li><a href="#" class="button primary fit">Get Started</a></li>
-							<li><a href="#" class="button fit">Log In</a></li>
-						</ul>
-					</nav>
+        #banner h1 {
+            font-size: 1.5em !important;
+            margin: 0 !important;
+        }
 
-				<!-- Banner -->
-					<section id="banner" class="major">
-						<div class="inner">
-							<header class="major">
-								<h1>Hi, my name is Forty</h1>
-							</header>
-							<div class="content">
-								<p>A responsive site template designed by HTML5 UP<br />
-								and released under the Creative Commons.</p>
-								<ul class="actions">
-									<li><a href="#one" class="button next scrolly">Get Started</a></li>
-								</ul>
-							</div>
-						</div>
-					</section>
+        #one.tiles {
+            display: flex !important;
+            flex-wrap: wrap !important;
+            align-items: stretch !important;
+        }
 
-				<!-- Main -->
-					<div id="main">
+        #one.tiles article {
+            background: #2a2f4a !important;
+            width: 50% !important;
+            min-height: 500px !important;
+            height: auto !important;
+            padding: 0 !important;
+            overflow: visible !important;
+            display: flex !important;
+            align-items: stretch !important;
+        }
 
-						<!-- One -->
-							<section id="one" class="tiles">
-								<article>
-									<span class="image">
-										<img src="images/pic01.jpg" alt="" />
-									</span>
-									<header class="major">
-										<h3><a href="landing.html" class="link">Unit 1</a></h3>
-										<p>Ipsum dolor sit amet</p>
-									</header>
-								</article>
-								<article>
-									<span class="image">
-										<img src="images/pic02.jpg" alt="" />
-									</span>
-									<header class="major">
-										<h3><a href="landing.html" class="link">Unit 2</a></h3>
-										<p>feugiat amet tempus</p>
-									</header>
-								</article>
-								<article>
-									<span class="image">
-										<img src="images/pic03.jpg" alt="" />
-									</span>
-									<header class="major">
-										<h3><a href="landing.html" class="link">Unit 3</a></h3>
-										<p>Lorem etiam nullam</p>
-									</header>
-								</article>
-								<article>
-									<span class="image">
-										<img src="images/pic04.jpg" alt="" />
-									</span>
-									<header class="major">
-										<h3><a href="landing.html" class="link">Unit 4</a></h3>
-										<p>Nisl sed aliquam</p>
-									</header>
-								</article>
-								<article>
-									<span class="image">
-										<img src="images/pic05.jpg" alt="" />
-									</span>
-									<header class="major">
-										<h3><a href="landing.html" class="link">Unit 5</a></h3>
-										<p>Ipsum dolor sit amet</p>
-									</header>
-								</article>
-								<article>
-									<span class="image">
-										<img src="images/pic06.jpg" alt="" />
-									</span>
-									<header class="major">
-										<h3><a href="landing.html" class="link">Unit 6</a></h3>
-										<p>Feugiat amet tempus</p>
-									</header>
-								</article>
-							</section>
+        #one.tiles article .image,
+        #one.tiles article:before,
+        #one.tiles article:after {
+            display: none !important;
+        }
 
-						<!-- Two -->
-							<section id="two">
-								<div class="inner">
-									<header class="major">
-										<h2>Massa libero</h2>
-									</header>
-									<p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus pharetra. Pellentesque condimentum sem. In efficitur ligula tate urna. Maecenas laoreet massa vel lacinia pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus amet pharetra et feugiat tempus.</p>
-									<ul class="actions">
-										<li><a href="landing.html" class="button next">View Unit 7 -12</a></li>
-									</ul>
-								</div>
-							</section>
+        #one.tiles article .tile-content {
+            width: 100%;
+            padding: 1.75em 2.25em;
+            position: relative !important;
+            z-index: 5;
+            transform: none !important;
+            display: flex;
+            flex-direction: column;
+        }
 
-					</div>
+        #one.tiles article h3,
+        #one.tiles article h4,
+        #one.tiles article p,
+        #one.tiles article li {
+            color: #ffffff !important;
+            opacity: 1 !important;
+            text-transform: none !important;
+            letter-spacing: normal !important;
+        }
 
+        #one.tiles article h3 {
+            font-size: 1.55em !important;
+            margin-bottom: 0.65em;
+        }
 
+        #one.tiles article h4 {
+            font-size: 1.05em !important;
+            margin-top: 1em;
+            margin-bottom: 0.45em;
+        }
 
-			</div>
+        #one.tiles article p,
+        #one.tiles article li {
+            font-size: 1rem;
+            line-height: 1.55;
+        }
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+        #one.tiles article ul {
+            margin-bottom: 0.9em;
+        }
 
-	</body>
+        #one.tiles article .actions {
+            margin-top: auto !important;
+        }
+
+        #one.tiles article .actions,
+        #one.tiles article .actions li,
+        #one.tiles article .button {
+            position: relative;
+            z-index: 20;
+        }
+
+        #one.tiles article .button {
+            font-size: 0.95rem !important;
+            padding: 0.7em 1.3em !important;
+            min-width: 150px;
+            text-align: center;
+            text-transform: none !important;
+            letter-spacing: normal !important;
+        }
+
+        @media screen and (max-width: 736px) {
+            #one.tiles article {
+                width: 100% !important;
+                min-height: auto !important;
+            }
+        }
+    </style>
+</head>
+
+<body class="is-preload">
+
+<div id="wrapper">
+
+    <header id="header" class="alt">
+        <a href="index.html" class="logo"><strong>Reena</strong> <span>Chaudhry</span></a>
+        <nav>
+            <a href="#menu">Menu</a>
+        </nav>
+    </header>
+
+    <nav id="menu">
+        <ul class="links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="landing.html">Landing</a></li>
+            <li><a href="generic.html">Generic</a></li>
+            <li><a href="elements.html">Elements</a></li>
+        </ul>
+    </nav>
+
+    <section id="banner">
+        <div class="inner">
+            <h1>Units 1 - 6 Artefacts</h1>
+        </div>
+    </section>
+
+    <div id="main">
+
+        <section id="one" class="tiles">
+
+            <article>
+                <div class="tile-content">
+                    <h3 style="color:#66d9ff !important;">SOLID Principles in Python</h3>
+
+                    <p>
+                        9-slide PowerPoint presentation, Python implementation demonstrating
+                        SOLID principles and automated unit tests using pytest.
+                    </p>
+
+                    <h4>Summary</h4>
+
+                    <p>
+                        This artefact builds on concepts introduced in Unit 1 (Object-Oriented
+                        Programming) and Unit 2 (SOLID Principles). A presentation was created
+                        to explain the core SOLID principles alongside a Python implementation
+                        demonstrating how good object-oriented design can improve maintainability,
+                        extensibility and code readability. Automated unit tests using pytest
+                        were also included to verify behaviour and demonstrate the importance of
+                        testable software design.
+                    </p>
+                </div>
+            </article>
+
+            <article>
+                <div class="tile-content">
+                    <h3>Learning & Reflection</h3>
+
+                    <h4>Key Learning</h4>
+
+                    <ul>
+                        <li>Single Responsibility Principle</li>
+                        <li>Open/Closed Principle</li>
+                        <li>Dependency Inversion Principle</li>
+                        <li>Loosely coupled and testable code</li>
+                        <li>Benefits of automated testing</li>
+                    </ul>
+
+                    <p>
+                        Implementing the example in Python helped me understand how design
+                        decisions affect maintainability and future enhancements. The unit
+                        tests reinforced the importance of designing classes that are easy
+                        to test and extend.
+                    </p>
+
+                    <ul class="actions">
+                        <li>
+                            <a href="https://github.com/rc25essex/e-portfolio/raw/portfolio-dev/artefacts/solid-principles/solid_principles_shapes_project.pptx" class="button small" target="_blank">
+                                Presentation
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/rc25essex/e-portfolio/blob/portfolio-dev/artefacts/solid-principles/shapes.py" class="button small" target="_blank">
+                                Source Code
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/rc25essex/e-portfolio/blob/portfolio-dev/artefacts/solid-principles/test_shapes.py" class="button small" target="_blank">
+                                Unit Tests
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </article>
+
+            <article>
+                <div class="tile-content">
+                    <h3 style="color:#7CFFB2 !important;">Structural Design Patterns</h3>
+
+                    <p>
+                        Seminar presentation and Python implementation demonstrating
+                        the Decorator and Composite patterns.
+                    </p>
+
+                    <h4>Summary</h4>
+
+                    <p>
+                        This artefact builds on Structural Design Pattern concepts introduced
+                        in Unit 4. A coffee ordering system was developed to show how objects
+                        can be composed and extended without modifying existing code.
+                    </p>
+                </div>
+            </article>
+
+            <article>
+                <div class="tile-content">
+                    <h3>Learning & Reflection</h3>
+
+                    <h4>Key Learning</h4>
+
+                    <ul>
+                        <li>Decorator Pattern</li>
+                        <li>Composite Pattern</li>
+                        <li>Structural Design Patterns</li>
+                        <li>Object Composition</li>
+                        <li>Extensible Software Design</li>
+                    </ul>
+
+                    <p>
+                        Developing the coffee ordering system improved my understanding of
+                        how structural patterns support flexible and maintainable software
+                        design through decoration and composition.
+                    </p>
+
+                    <ul class="actions">
+                        <li>
+                            <a href="https://github.com/rc25essex/e-portfolio/tree/portfolio-dev/artefacts/structural-design-patterns/cafe_design_patterns_presentation.pptx" class="button small" target="_blank">
+                                Presentation
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/rc25essex/e-portfolio/tree/portfolio-dev/artefacts/structural-design-patterns/cafe_patterns.py" class="button small" target="_blank">
+                                Source Code
+                            </a>
+                        </li>
+                          <li>
+                            <a href="https://github.com/rc25essex/e-portfolio/tree/portfolio-dev/artefacts/structural-design-patterns/test_cafe_patterns.py" class="button small" target="_blank">
+                                Unit Tests
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </article>
+
+        </section>
+
+    </div>
+
+</div>
+
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/jquery.scrolly.min.js"></script>
+<script src="assets/js/jquery.scrollex.min.js"></script>
+<script src="assets/js/browser.min.js"></script>
+<script src="assets/js/breakpoints.min.js"></script>
+<script src="assets/js/util.js"></script>
+<script src="assets/js/main.js"></script>
+
+</body>
 </html>
