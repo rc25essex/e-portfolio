@@ -131,145 +131,127 @@
 					<nav id="menu">
 						<ul class="links">
 							<li><a href="index.html">Home</a></li>
-							<li><a href="landing.html">Landing</a></li>
+							<li><a href="landing.html">Module Artefacts</a></li>
 							<li><a href="capstone.html">Capstone</a></li>
 						</ul>
 					</nav>
 
     <section id="banner">
         <div class="inner">
-            <h1>Units 1 - 6 Artefacts</h1>
+        <h1>Capstone Project</h1>
+        <p>Event-Driven Order Processing System</p>
         </div>
     </section>
 
     <div id="main">
 
-        <section id="one" class="tiles">
+<section id="one" class="tiles">
 
-            <article>
-                <div class="tile-content">
-                    <h3 style="color:#66d9ff !important;">SOLID Principles in Python</h3>
+    <article>
+        <div class="tile-content">
+            <h3 style="color:#66d9ff !important;">Project Overview</h3>
 
-                    <p>
-                        9-slide PowerPoint presentation, Python implementation demonstrating
-                        SOLID principles and automated unit tests using pytest.
-                    </p>
+            <p>
+                This capstone project demonstrates the design and development of an
+                event-driven order processing system using Java 21, Spring Boot,
+                Apache Kafka and H2.
+            </p>
 
-                    <h4>Summary</h4>
+            <p>
+                The application models an Order Service and a Fulfilment Service
+                within a single Spring Boot project. Kafka is used to publish and
+                consume order lifecycle events asynchronously.
+            </p>
 
-                    <p>
-                        This artefact builds on concepts introduced in Unit 1 (Object-Oriented
-                        Programming) and Unit 2 (SOLID Principles). A presentation was created
-                        to explain the core SOLID principles alongside a Python implementation
-                        demonstrating how good object-oriented design can improve maintainability,
-                        extensibility and code readability. Automated unit tests using pytest
-                        were also included to verify behaviour and demonstrate the importance of
-                        testable software design.
-                    </p>
-                </div>
-            </article>
+            <h4>Project Objectives</h4>
 
-            <article>
-                <div class="tile-content">
-                    <h3>Learning & Reflection</h3>
+            <ul>
+                <li>Create and store customer orders.</li>
+                <li>Publish order-created events through Kafka.</li>
+                <li>Process orders asynchronously through a fulfilment component.</li>
+                <li>Publish fulfilled or rejected order events.</li>
+                <li>Update and retrieve the current order status.</li>
+            </ul>
+        </div>
+    </article>
 
-                    <h4>Key Learning</h4>
+    <article>
+        <div class="tile-content">
+            <h3>Technology Stack</h3>
 
-                    <ul>
-                        <li>Single Responsibility Principle</li>
-                        <li>Open/Closed Principle</li>
-                        <li>Dependency Inversion Principle</li>
-                        <li>Loosely coupled and testable code</li>
-                        <li>Benefits of automated testing</li>
-                    </ul>
+            <ul>
+                <li>Java 21</li>
+                <li>Spring Boot</li>
+                <li>Apache Kafka</li>
+                <li>Spring Data JPA</li>
+                <li>H2 in-memory database</li>
+                <li>Gradle</li>
+                <li>JUnit and Mockito</li>
+                <li>Docker Desktop</li>
+            </ul>
 
-                    <p>
-                        Implementing the example in Python helped me understand how design
-                        decisions affect maintainability and future enhancements. The unit
-                        tests reinforced the importance of designing classes that are easy
-                        to test and extend.
-                    </p>
+            <h4>Architecture Style</h4>
 
-                    <ul class="actions">
-                        <li>
-                            <a href="https://github.com/rc25essex/e-portfolio/raw/portfolio-dev/artefacts/solid-principles/solid_principles_shapes_project.pptx" class="button small" target="_blank">
-                                Presentation
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://github.com/rc25essex/e-portfolio/blob/portfolio-dev/artefacts/solid-principles/shapes.py" class="button small" target="_blank">
-                                Source Code
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://github.com/rc25essex/e-portfolio/blob/portfolio-dev/artefacts/solid-principles/test_shapes.py" class="button small" target="_blank">
-                                Unit Tests
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </article>
+            <p>
+                The project applies event-driven architecture to separate order
+                creation from fulfilment processing. This reduces direct coupling
+                between the two logical services and allows processing to occur
+                asynchronously.
+            </p>
+        </div>
+    </article>
 
-            <article>
-                <div class="tile-content">
-                    <h3 style="color:#7CFFB2 !important;">Structural Design Patterns</h3>
+    <article>
+        <div class="tile-content">
+            <h3 style="color:#7CFFB2 !important;">Event Flow</h3>
 
-                    <p>
-                        Seminar presentation and Python implementation demonstrating
-                        the Decorator and Composite patterns.
-                    </p>
+            <ol>
+                <li>A client submits an order through the REST API.</li>
+                <li>The Order Service validates and stores the order.</li>
+                <li>An OrderCreatedEvent is published to Kafka.</li>
+                <li>The Fulfilment Service consumes the event.</li>
+                <li>The order is either fulfilled or rejected.</li>
+                <li>A result event is published through Kafka.</li>
+                <li>The Order Service updates the final order status.</li>
+            </ol>
+        </div>
+    </article>
 
-                    <h4>Summary</h4>
+    <article>
+        <div class="tile-content">
+            <h3>Design and Learning</h3>
 
-                    <p>
-                        This artefact builds on Structural Design Pattern concepts introduced
-                        in Unit 4. A coffee ordering system was developed to show how objects
-                        can be composed and extended without modifying existing code.
-                    </p>
-                </div>
-            </article>
+            <p>
+                The project was designed incrementally, beginning with requirements,
+                high-level architecture and UML diagrams before implementation.
+                Each application layer was developed and tested before moving to the
+                next stage.
+            </p>
 
-            <article>
-                <div class="tile-content">
-                    <h3>Learning & Reflection</h3>
+            <h4>Key Learning</h4>
 
-                    <h4>Key Learning</h4>
+            <ul>
+                <li>Event-driven communication using Kafka producers and consumers.</li>
+                <li>Asynchronous processing and loose coupling.</li>
+                <li>Spring Boot REST and persistence integration.</li>
+                <li>Designing event contracts and order lifecycle states.</li>
+                <li>Incremental development and layered testing.</li>
+            </ul>
 
-                    <ul>
-                        <li>Decorator Pattern</li>
-                        <li>Composite Pattern</li>
-                        <li>Structural Design Patterns</li>
-                        <li>Object Composition</li>
-                        <li>Extensible Software Design</li>
-                    </ul>
+            <ul class="actions">
+                <li>
+                    <a href="https://github.com/rc25essex/event-driven-order-system-capstone"
+                       class="button small"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        View Repository
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </article>
 
-                    <p>
-                        Developing the coffee ordering system improved my understanding of
-                        how structural patterns support flexible and maintainable software
-                        design through decoration and composition.
-                    </p>
-
-                    <ul class="actions">
-                        <li>
-                            <a href="https://github.com/rc25essex/e-portfolio/tree/portfolio-dev/artefacts/structural-design-patterns/cafe_design_patterns_presentation.pptx" class="button small" target="_blank">
-                                Presentation
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://github.com/rc25essex/e-portfolio/tree/portfolio-dev/artefacts/structural-design-patterns/cafe_patterns.py" class="button small" target="_blank">
-                                Source Code
-                            </a>
-                        </li>
-                          <li>
-                            <a href="https://github.com/rc25essex/e-portfolio/tree/portfolio-dev/artefacts/structural-design-patterns/test_cafe_patterns.py" class="button small" target="_blank">
-                                Unit Tests
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </article>
-
-        </section>
+</section>
 
     </div>
 
