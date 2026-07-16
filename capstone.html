@@ -1,0 +1,269 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Reena Chaudhry Portfolio</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+
+    <style>
+        #banner {
+            min-height: 0 !important;
+            height: auto !important;
+            padding: 1.25em 0 1em 0 !important;
+        }
+
+        #banner .inner {
+            text-align: center;
+        }
+
+        #banner h1 {
+            font-size: 1.5em !important;
+            margin: 0 !important;
+        }
+
+        #one.tiles {
+            display: flex !important;
+            flex-wrap: wrap !important;
+            align-items: stretch !important;
+        }
+
+        #one.tiles article {
+            background: #2a2f4a !important;
+            width: 50% !important;
+            min-height: 500px !important;
+            height: auto !important;
+            padding: 0 !important;
+            overflow: visible !important;
+            display: flex !important;
+            align-items: stretch !important;
+        }
+
+        #one.tiles article .image,
+        #one.tiles article:before,
+        #one.tiles article:after {
+            display: none !important;
+        }
+
+        #one.tiles article .tile-content {
+            width: 100%;
+            padding: 1.75em 2.25em;
+            position: relative !important;
+            z-index: 5;
+            transform: none !important;
+            display: flex;
+            flex-direction: column;
+        }
+
+        #one.tiles article h3,
+        #one.tiles article h4,
+        #one.tiles article p,
+        #one.tiles article li {
+            color: #ffffff !important;
+            opacity: 1 !important;
+            text-transform: none !important;
+            letter-spacing: normal !important;
+        }
+
+        #one.tiles article h3 {
+            font-size: 1.55em !important;
+            margin-bottom: 0.65em;
+        }
+
+        #one.tiles article h4 {
+            font-size: 1.05em !important;
+            margin-top: 1em;
+            margin-bottom: 0.45em;
+        }
+
+        #one.tiles article p,
+        #one.tiles article li {
+            font-size: 1rem;
+            line-height: 1.55;
+        }
+
+        #one.tiles article ul {
+            margin-bottom: 0.9em;
+        }
+
+        #one.tiles article .actions {
+            margin-top: auto !important;
+        }
+
+        #one.tiles article .actions,
+        #one.tiles article .actions li,
+        #one.tiles article .button {
+            position: relative;
+            z-index: 20;
+        }
+
+        #one.tiles article .button {
+            font-size: 0.95rem !important;
+            padding: 0.7em 1.3em !important;
+            min-width: 150px;
+            text-align: center;
+            text-transform: none !important;
+            letter-spacing: normal !important;
+        }
+
+        @media screen and (max-width: 736px) {
+            #one.tiles article {
+                width: 100% !important;
+                min-height: auto !important;
+            }
+        }
+    </style>
+</head>
+
+<body class="is-preload">
+
+<div id="wrapper">
+
+    <header id="header" class="alt">
+        <a href="index.html" class="logo"><strong>Reena</strong> <span>Chaudhry</span></a>
+        <nav>
+            <a href="#menu">Menu</a>
+        </nav>
+    </header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<ul class="links">
+							<li><a href="index.html">Home</a></li>
+							<li><a href="landing.html">Module Artefacts</a></li>
+							<li><a href="capstone.html">Capstone</a></li>
+						</ul>
+					</nav>
+
+    <section id="banner">
+        <div class="inner">
+        <h1>Capstone Project</h1>
+        <p>Event-Driven Order Processing System</p>
+        </div>
+    </section>
+
+    <div id="main">
+
+<section id="one" class="tiles">
+
+    <article>
+        <div class="tile-content">
+            <h3 style="color:#66d9ff !important;">Project Overview</h3>
+
+            <p>
+                This capstone project demonstrates the design and development of an
+                event-driven order processing system using Java 21, Spring Boot,
+                Apache Kafka and H2.
+            </p>
+
+            <p>
+                The application models an Order Service and a Fulfilment Service
+                within a single Spring Boot project. Kafka is used to publish and
+                consume order lifecycle events asynchronously.
+            </p>
+
+            <h4>Project Objectives</h4>
+
+            <ul>
+                <li>Create and store customer orders.</li>
+                <li>Publish order-created events through Kafka.</li>
+                <li>Process orders asynchronously through a fulfilment component.</li>
+                <li>Publish fulfilled or rejected order events.</li>
+                <li>Update and retrieve the current order status.</li>
+            </ul>
+        </div>
+    </article>
+
+    <article>
+        <div class="tile-content">
+            <h3>Technology Stack</h3>
+
+            <ul>
+                <li>Java 21</li>
+                <li>Spring Boot</li>
+                <li>Apache Kafka</li>
+                <li>Spring Data JPA</li>
+                <li>H2 in-memory database</li>
+                <li>Gradle</li>
+                <li>JUnit and Mockito</li>
+                <li>Docker Desktop</li>
+            </ul>
+
+            <h4>Architecture Style</h4>
+
+            <p>
+                The project applies event-driven architecture to separate order
+                creation from fulfilment processing. This reduces direct coupling
+                between the two logical services and allows processing to occur
+                asynchronously.
+            </p>
+        </div>
+    </article>
+
+    <article>
+        <div class="tile-content">
+            <h3 style="color:#7CFFB2 !important;">Event Flow</h3>
+
+            <ol>
+                <li>A client submits an order through the REST API.</li>
+                <li>The Order Service validates and stores the order.</li>
+                <li>An OrderCreatedEvent is published to Kafka.</li>
+                <li>The Fulfilment Service consumes the event.</li>
+                <li>The order is either fulfilled or rejected.</li>
+                <li>A result event is published through Kafka.</li>
+                <li>The Order Service updates the final order status.</li>
+            </ol>
+        </div>
+    </article>
+
+    <article>
+        <div class="tile-content">
+            <h3>Design and Learning</h3>
+
+            <p>
+                The project was designed incrementally, beginning with requirements,
+                high-level architecture and UML diagrams before implementation.
+                Each application layer was developed and tested before moving to the
+                next stage.
+            </p>
+
+            <h4>Key Learning</h4>
+
+            <ul>
+                <li>Event-driven communication using Kafka producers and consumers.</li>
+                <li>Asynchronous processing and loose coupling.</li>
+                <li>Spring Boot REST and persistence integration.</li>
+                <li>Designing event contracts and order lifecycle states.</li>
+                <li>Incremental development and layered testing.</li>
+            </ul>
+
+            <ul class="actions">
+                <li>
+                    <a href="https://github.com/rc25essex/event-driven-order-system-capstone"
+                       class="button small"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        View Repository
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </article>
+
+</section>
+
+    </div>
+
+</div>
+
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/jquery.scrolly.min.js"></script>
+<script src="assets/js/jquery.scrollex.min.js"></script>
+<script src="assets/js/browser.min.js"></script>
+<script src="assets/js/breakpoints.min.js"></script>
+<script src="assets/js/util.js"></script>
+<script src="assets/js/main.js"></script>
+
+</body>
+</html>
