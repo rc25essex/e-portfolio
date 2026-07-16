@@ -25,3 +25,5 @@ def test_azure_factory_creates_azure_family():
         factory.create_embedding_model(),
         AzureEmbeddingModel
     )
+
+
