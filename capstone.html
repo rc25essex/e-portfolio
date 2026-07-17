@@ -3,9 +3,14 @@
 <head>
     <title>Reena Chaudhry Portfolio</title>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, user-scalable=no" />
+
     <link rel="stylesheet" href="assets/css/main.css" />
-    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+
+    <noscript>
+        <link rel="stylesheet" href="assets/css/noscript.css" />
+    </noscript>
 
     <style>
         #banner {
@@ -34,6 +39,7 @@
             width: 50% !important;
             min-height: 500px !important;
             height: auto !important;
+            max-height: none !important;
             padding: 0 !important;
             overflow: visible !important;
             display: flex !important;
@@ -59,7 +65,9 @@
         #one.tiles article h3,
         #one.tiles article h4,
         #one.tiles article p,
-        #one.tiles article li {
+        #one.tiles article li,
+        #one.tiles article td,
+        #one.tiles article th {
             color: #ffffff !important;
             opacity: 1 !important;
             text-transform: none !important;
@@ -69,6 +77,19 @@
         #one.tiles article h3 {
             font-size: 1.55em !important;
             margin-bottom: 0.65em;
+        }
+
+        #one.tiles article .artifact-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75em;
+            margin: 0.5em 0 1em 0;
+            padding: 0;
+            list-style: none;
+        }
+        
+        #one.tiles article .artifact-actions li {
+            padding: 0;
         }
 
         #one.tiles article h4 {
@@ -83,8 +104,51 @@
             line-height: 1.55;
         }
 
-        #one.tiles article ul {
+        #one.tiles article ul,
+        #one.tiles article ol {
             margin-bottom: 0.9em;
+        }
+
+        .table-wrapper {
+            width: 100%;
+            margin-bottom: 0.75em;
+        }
+
+        .technology-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.93rem;
+            line-height: 1.35;
+        }
+
+        .technology-table th,
+        .technology-table td {
+            padding: 0.45em 0.55em;
+            text-align: left;
+            vertical-align: top;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+        }
+
+        .technology-table th {
+            font-weight: 700;
+        }
+
+        .technology-table td:first-child {
+            width: 34%;
+            font-weight: 600;
+            white-space: nowrap;
+        }
+
+        .technology-table tbody tr:last-child td {
+            border-bottom: none;
+        }
+
+        #one.tiles article code {
+            background: transparent;
+            color: #ffffff;
+            border: 0;
+            padding: 0;
+            font-size: inherit;
         }
 
         #one.tiles article .actions {
@@ -112,6 +176,15 @@
                 width: 100% !important;
                 min-height: auto !important;
             }
+
+            .technology-table {
+                font-size: 0.85rem;
+            }
+
+            .technology-table th,
+            .technology-table td {
+                padding: 0.4em;
+            }
         }
     </style>
 </head>
@@ -121,137 +194,347 @@
 <div id="wrapper">
 
     <header id="header" class="alt">
-        <a href="index.html" class="logo"><strong>Reena</strong> <span>Chaudhry</span></a>
+        <a href="index.html" class="logo">
+            <strong>Reena</strong>
+            <span>Chaudhry</span>
+        </a>
+
         <nav>
             <a href="#menu">Menu</a>
         </nav>
     </header>
 
-				<!-- Menu -->
-					<nav id="menu">
-						<ul class="links">
-							<li><a href="index.html">Home</a></li>
-							<li><a href="landing.html">Module Artefacts</a></li>
-							<li><a href="capstone.html">Capstone</a></li>
-						</ul>
-					</nav>
+    <!-- Menu -->
+    <nav id="menu">
+        <ul class="links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="landing.html">Module Artefacts</a></li>
+            <li><a href="capstone.html">Capstone</a></li>
+        </ul>
+    </nav>
 
     <section id="banner">
         <div class="inner">
-        <h1>Capstone Project</h1>
-        <p>Event-Driven Order Processing System</p>
+            <h1>Capstone Project</h1>
+            <p>Event-Driven Order Processing System</p>
         </div>
     </section>
 
     <div id="main">
 
-<section id="one" class="tiles">
+        <section id="one" class="tiles">
 
-    <article>
-        <div class="tile-content">
-            <h3 style="color:#66d9ff !important;">Project Overview</h3>
+            <article>
+                <div class="tile-content">
 
-            <p>
-                This capstone project demonstrates the design and development of an
-                event-driven order processing system using Java 21, Spring Boot,
-                Apache Kafka and H2.
-            </p>
+                    <h3 style="color:#66d9ff !important;">
+                        Project Overview
+                    </h3>
 
-            <p>
-                The application models an Order Service and a Fulfilment Service
-                within a single Spring Boot project. Kafka is used to publish and
-                consume order lifecycle events asynchronously.
-            </p>
+                    <p>
+                        This capstone project demonstrates the design and implementation of an event-driven order processing system that models
+                        how customer orders can be processed asynchronously using loosely coupled services.
+                        It was developed to consolidate the advanced object-oriented design, software architecture and secure development
+                        principles studied throughout the module 
+                        while enhancing my professional software engineering skills by designing and implementing a realistic backend application.
+                    </p>
 
-            <h4>Project Objectives</h4>
+                    <p>
+                        The application models two logical microservices—an
+                        Order Service and a Fulfilment Service—within a single
+                        application for simplicity. Each service has a clearly
+                        defined responsibility and communicates through Kafka
+                        events rather than direct method calls, demonstrating
+                        event-driven architecture and asynchronous messaging
+                        without the complexity of deploying multiple
+                        applications.
+                    </p>
 
-            <ul>
-                <li>Create and store customer orders.</li>
-                <li>Publish order-created events through Kafka.</li>
-                <li>Process orders asynchronously through a fulfilment component.</li>
-                <li>Publish fulfilled or rejected order events.</li>
-                <li>Update and retrieve the current order status.</li>
-            </ul>
-        </div>
-    </article>
+                    <p>
+                        Customers can submit orders through a REST API. Orders
+                        are validated, stored with an initial status, processed
+                        asynchronously and updated throughout the fulfilment
+                        lifecycle. Clients can then retrieve the latest order
+                        information through REST endpoints.
+                    </p>
 
-    <article>
-        <div class="tile-content">
-            <h3>Technology Stack</h3>
+                    <h4>Project Objectives</h4>
 
-            <ul>
-                <li>Java 21</li>
-                <li>Spring Boot</li>
-                <li>Apache Kafka</li>
-                <li>Spring Data JPA</li>
-                <li>H2 in-memory database</li>
-                <li>Gradle</li>
-                <li>JUnit and Mockito</li>
-                <li>Docker Desktop</li>
-            </ul>
+                    <ul>
+                        <li>Create, validate and store customer orders.</li>
+                        <li>Publish order-created events through Kafka.</li>
+                        <li>
+                            Process orders asynchronously through a fulfilment
+                            component.
+                        </li>
+                        <li>Publish fulfilled or rejected order events.</li>
+                        <li>
+                            Update and retrieve the current order status.
+                        </li>
+                        <li>
+                            Apply clean code, layered design and automated
+                            testing.
+                        </li>
+                        <li>
+                            Apply TDD and BDD testing practices using JUnit 5, Mockito and Karate.
+                        </li>
+                    </ul>
 
-            <h4>Architecture Style</h4>
+                </div>
+            </article>
 
-            <p>
-                The project applies event-driven architecture to separate order
-                creation from fulfilment processing. This reduces direct coupling
-                between the two logical services and allows processing to occur
-                asynchronously.
-            </p>
-        </div>
-    </article>
+            <article>
+                <div class="tile-content">
 
-    <article>
-        <div class="tile-content">
-            <h3 style="color:#7CFFB2 !important;">Event Flow</h3>
+                    <h3>Technology Stack</h3>
 
-            <ol>
-                <li>A client submits an order through the REST API.</li>
-                <li>The Order Service validates and stores the order.</li>
-                <li>An OrderCreatedEvent is published to Kafka.</li>
-                <li>The Fulfilment Service consumes the event.</li>
-                <li>The order is either fulfilled or rejected.</li>
-                <li>A result event is published through Kafka.</li>
-                <li>The Order Service updates the final order status.</li>
-            </ol>
-        </div>
-    </article>
+                    <p>
+                        The project was implemented using the following
+                        technologies:
+                    </p>
 
-    <article>
-        <div class="tile-content">
-            <h3>Design and Learning</h3>
+                    <div class="table-wrapper">
+                        <table class="technology-table">
+                            <thead>
+                                <tr>
+                                    <th>Technology</th>
+                                    <th>Purpose</th>
+                                </tr>
+                            </thead>
 
-            <p>
-                The project was designed incrementally, beginning with requirements,
-                high-level architecture and UML diagrams before implementation.
-                Each application layer was developed and tested before moving to the
-                next stage.
-            </p>
+                            <tbody>
+                                <tr>
+                                    <td>Java 21</td>
+                                    <td>Core programming language</td>
+                                </tr>
 
-            <h4>Key Learning</h4>
+                                <tr>
+                                    <td>Spring Boot</td>
+                                    <td>
+                                        Application framework, dependency injection and REST APIs
+                                    </td>
+                                </tr>
 
-            <ul>
-                <li>Event-driven communication using Kafka producers and consumers.</li>
-                <li>Asynchronous processing and loose coupling.</li>
-                <li>Spring Boot REST and persistence integration.</li>
-                <li>Designing event contracts and order lifecycle states.</li>
-                <li>Incremental development and layered testing.</li>
-            </ul>
+                                <tr>
+                                    <td>Spring Data JPA</td>
+                                    <td>Database persistence</td>
+                                </tr>
 
-            <ul class="actions">
-                <li>
-                    <a href="https://github.com/rc25essex/event-driven-order-system-capstone"
-                       class="button small"
-                       target="_blank"
-                       rel="noopener noreferrer">
-                        View Repository
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </article>
+                                <tr>
+                                    <td>Apache Kafka</td>
+                                    <td>Asynchronous event messaging</td>
+                                </tr>
 
-</section>
+                                <tr>
+                                    <td>H2 Database</td>
+                                    <td>In-memory relational database</td>
+                                </tr>
+
+                                <tr>
+                                    <td>Gradle</td>
+                                    <td>
+                                        Build automation and dependency
+                                        management
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>Docker Desktop</td>
+                                    <td>Local Kafka infrastructure</td>
+                                </tr>
+
+                                <tr>
+                                    <td>JUnit 5, Mockito and Karate</td>
+                                    <td>Unit, API and integration testing</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <h4>Architecture Style</h4>
+
+                    <p>
+                        The project applies event-driven architecture to
+                        separate order creation from fulfilment processing. The
+                        Order Service publishes events rather than calling the
+                        Fulfilment Service directly, reducing coupling between
+                        components and allowing each stage of the workflow to
+                        operate independently.
+                    </p>
+
+                    <p>
+                        Although the two logical services are contained within
+                        one Spring Boot application, their responsibilities
+                        remain separated through packages, interfaces and event
+                        contracts. This keeps the project manageable for local
+                        development while reflecting the communication style
+                        used by independently deployed microservices.
+                    </p>
+
+                </div>
+            </article>
+
+            <article>
+                <div class="tile-content">
+
+                    <h3 style="color:#7CFFB2 !important;">
+                        Event Flow
+                    </h3>
+
+                    <ol>
+                        <li>
+                            A client submits an order through the REST API.
+                        </li>
+
+                        <li>
+                            The Order Service validates the request and
+                            calculates the order total.
+                        </li>
+
+                        <li>
+                            The order is stored with an initial
+                            <strong>PENDING</strong> status.
+                        </li>
+
+                        <li>
+                            An <code>OrderCreatedEvent</code> is published to
+                            Kafka.
+                        </li>
+
+                        <li>
+                            The Fulfilment Service consumes and processes the
+                            event asynchronously.
+                        </li>
+
+                        <li>
+                            The order is either fulfilled or rejected according
+                            to the processing result.
+                        </li>
+
+                        <li>
+                            A fulfilment result event is published through
+                            Kafka.
+                        </li>
+
+                        <li>
+                            The Order Service consumes the result and updates
+                            the final status.
+                        </li>
+
+                        <li>
+                            The client retrieves the latest order state through
+                            the REST API.
+                        </li>
+                    </ol>
+
+                    <p>
+                        This workflow ensures that the REST request does not
+                        need to wait for fulfilment to complete. The initial
+                        response confirms that the order has been accepted,
+                        while the final outcome is recorded when the result
+                        event is consumed.
+                    </p>
+                    
+                    <h4> Project Artefacts </h4>
+                    <ul class="artifact-actions">
+                        <li>
+                        <a href="https://github.com/rc25essex/event-driven-order-system-capstone"
+                           class="button small" target="_blank">
+                            View Repository
+                        </a>
+                        </li>
+                          <li>  
+                    
+                        <a href="https://github.com/rc25essex/event-driven-order-system-capstone/blob/main/High-Level%20Design.pdf"
+                           class="button small" target="_blank">
+                            High-Level Design
+                        </a>
+                    </li>
+                    </ul>
+                   
+                </div>
+            </article>
+
+            <article>
+                <div class="tile-content">
+
+                    <h3>Design and Learning</h3>
+
+                    <p>
+                        The project was developed incrementally, beginning with
+                        functional and non-functional requirements, high-level
+                        architecture and UML diagrams. The domain model, REST
+                        layer, persistence layer and Kafka components were then
+                        implemented in stages, with each layer tested before
+                        further functionality was introduced.
+                    </p>
+
+                    <p>
+                        This approach made defects easier to isolate and helped
+                        maintain clear responsibilities between controllers,
+                        services, repositories, event producers and consumers.
+                        Unit tests verified individual classes, while
+                        integration-focused tests checked REST behaviour,
+                        persistence and event handling.
+                    </p>
+
+                    <p>
+                        The source code is supported by a High-Level Design
+                        document, UML diagrams, test results and example REST
+                        responses. Together, these artefacts provide evidence
+                        of the complete development process from initial design
+                        through implementation, testing and final evaluation.
+                    </p>
+
+
+                    <h4>Key Learning</h4>
+
+                    <ul>
+                        <li>
+                            Configuring Kafka producers, consumers and topics
+                            within Spring Boot.
+                        </li>
+
+                        <li>
+                            Understanding asynchronous processing and loose
+                            coupling.
+                        </li>
+
+                        <li>
+                            Designing stable event contracts and order
+                            lifecycle states.
+                        </li>
+
+                        <li>
+                            Integrating REST endpoints, validation and JPA
+                            persistence.
+                        </li>
+
+                        <li>
+                            Using Docker Desktop to run Kafka locally.
+                        </li>
+
+                        <li>
+                            Applying incremental development and layered
+                            automated testing.
+                        </li>
+                    </ul>
+
+                    <p>
+                        The project also strengthened my understanding of the
+                        trade-offs involved in event-driven systems, including
+                        eventual consistency, message handling and the need for
+                        clear event boundaries. It provides a practical
+                        foundation for further development in Kafka,
+                        microservices, containerisation and distributed system
+                        design.
+                    </p>
+
+
+                </div>
+            </article>
+
+        </section>
 
     </div>
 
