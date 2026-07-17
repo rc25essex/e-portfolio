@@ -435,7 +435,6 @@
 			                </a>
 			            </li>
 			        </ul>
-			<br/><br/>
 			    </div>
 			</article>
 			<article>
@@ -487,6 +486,77 @@
 		        <ul class="actions">
 		            <li>
 		                <a href="https://github.com/rc25essex/thread-safe-banking-system"
+		                   class="button small"
+		                   target="_blank">
+		                    View Repository
+		                </a>
+		            </li>
+		        </ul>
+		
+		    </div>
+		</article>
+			<article>
+    <div class="tile-content">
+
+        <h3 style="color:#82B1FF !important;">Unit 7: Secure Coding Practices</h3>
+
+        <p>
+            Collaborative discussion exercise analysing and refactoring an insecure
+            Python authentication system, supported by automated unit tests using pytest.
+        </p>
+
+        <h4>Summary</h4>
+
+        <p>
+            This artefact examined security weaknesses in a basic authentication
+            program, including plaintext password storage, weak passwords, missing
+            input validation and unlimited login attempts. The original implementation
+            also relied on direct credential comparison and provided little protection
+            against malicious or unexpected input.
+        </p>
+
+        <p>
+            The refactored version hashes passwords using
+            <code>bcrypt</code>, enforces password-strength requirements and validates
+            empty credentials before processing. Secure hash verification replaces
+            plaintext password comparison, while failed login attempts are tracked and
+            accounts are locked after three unsuccessful attempts to reduce the risk of
+            brute-force attacks. Automated tests developed with pytest verify
+            registration, authentication, password validation and account-lockout
+            behaviour.
+        </p>
+
+		    </div>
+		</article>
+		
+		<article>
+		    <div class="tile-content">
+		
+		        <h3>Learning &amp; Reflection</h3>
+		
+		        <h4>Key Learning</h4>
+		
+		        <ul>
+		            <li>Identifying weaknesses in insecure authentication code.</li>
+		            <li>Protecting stored passwords using bcrypt hashing and salting.</li>
+		            <li>Enforcing stronger password requirements.</li>
+		            <li>Validating credentials before processing user input.</li>
+		            <li>Reducing brute-force risk through failed-attempt tracking and account lockout.</li>
+		            <li>Testing secure and unsuccessful authentication scenarios using pytest.</li>
+		        </ul>
+		
+		        <p>
+		            Analysing the original implementation strengthened my understanding that
+		            functional authentication is not necessarily secure authentication.
+		            Refactoring the program demonstrated how password hashing, input validation
+		            and login-attempt controls can be combined to provide layered protection.
+		            Writing automated tests also reinforced the importance of verifying both
+		            successful behaviour and security-related failure conditions.
+		        </p>
+		
+		        <ul class="actions">
+		            <li>
+		                <a href="https://github.com/rc25essex/e-portfolio/tree/main/artefacts/secure-coding"
 		                   class="button small"
 		                   target="_blank">
 		                    View Repository
