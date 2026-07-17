@@ -184,7 +184,7 @@
                         <li>Applying abstraction, inheritance and polymorphism in object-oriented design.</li>
                         <li>Using the Single Responsibility Principle to separate class responsibilities.</li>
                         <li>Extending behaviour using the Open/Closed Principle.</li>
-                        <li>Loosely coupled through Dependency Inversion.</li>
+                        <li>Loose coupling through Dependency Inversion.</li>
                         <li>Verifying behaviour using unit tests developed with pytest.</li>
                     </ul>
 
@@ -210,20 +210,26 @@
 
             <article>
                 <div class="tile-content">
-                    <h3 style="color:#7CFFB2 !important;">Structural Design Patterns</h3>
+                    <h3 style="color:#7CFFB2 !important;">Unit 3: Creational Design Patterns</h3>
 
                     <p>
-                        Seminar presentation and Python implementation demonstrating
-                        the Decorator and Composite patterns.
+						Python implementation demonstrating the Abstract Factory pattern with automated unit tests using pytest.
                     </p>
 
                     <h4>Summary</h4>
 
                     <p>
-                        This artefact builds on Structural Design Pattern concepts introduced
-                        in Unit 4. A coffee ordering system was developed to show how objects
-                        can be composed and extended without modifying existing code.
+						This artefact explores the Abstract Factory design pattern by implementing a configurable AI service capable of working with 
+						different providers without changing the application logic.
+						Separate product families were created for OpenAI and Azure AI, with each factory producing compatible text generation and 
+						embedding model implementations.
                     </p>
+					<p>The client application interacts only with the abstract factory and product interfaces, allowing the underlying AI provider to be 
+						changed simply by selecting a different factory. 
+						This demonstrates how the Abstract Factory pattern promotes loose coupling, improves maintainability and supports future extensibility. 
+						Automated unit tests developed with pytest verify that each factory creates the correct product family and that the application behaves 
+						consistently regardless of the selected provider.
+					</p>
                 </div>
             </article>
 
@@ -234,28 +240,26 @@
                     <h4>Key Learning</h4>
 
                     <ul>
-                        <li>Decorator Pattern</li>
-                        <li>Composite Pattern</li>
-                        <li>Structural Design Patterns</li>
-                        <li>Object Composition</li>
-                        <li>Extensible Software Design</li>
+						<li>Applying the Abstract Factory pattern to create related object families.</li>
+						<li>Programming against interfaces rather than concrete implementations.</li>
+						<li>Reducing coupling between application logic and implementation details.</li>
+						<li>Supporting extensibility by introducing new providers without modifying existing client code.</li>
+						<li>Verifying factory behaviour through automated unit testing with pytest.</li>
                     </ul>
 
                     <p>
-                        Developing the coffee ordering system improved my understanding of
-                        how structural patterns support flexible and maintainable software
-                        design through decoration and composition.
+						Developing this application strengthened my understanding of creational design patterns and demonstrated how software can remain 
+						flexible when implementation details are abstracted behind common interfaces. 
+						Modelling the example around AI providers also illustrated a realistic scenario where different services can be substituted
+						without affecting the rest of the application. 
+						Creating automated tests reinforced the importance of validating object creation behaviour and ensuring each factory produces 
+						compatible components.
                     </p>
 
                     <ul class="actions">
                         <li>
-                            <a href="https://github.com/rc25essex/e-portfolio/tree/portfolio-dev/artefacts/structural-design-patterns/cafe_patterns.py" class="button small" target="_blank">
-                                Source Code
-                            </a>
-                        </li>
-                          <li>
-                            <a href="https://github.com/rc25essex/e-portfolio/tree/portfolio-dev/artefacts/structural-design-patterns/test_cafe_patterns.py" class="button small" target="_blank">
-                                Unit Tests
+                            <a href="https://github.com/rc25essex/e-portfolio/tree/main/artefacts/abstract-factory-pattern" class="button small" target="_blank">
+                                View Repository
                             </a>
                         </li>
                     </ul>
