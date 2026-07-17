@@ -79,6 +79,19 @@
             margin-bottom: 0.65em;
         }
 
+        #one.tiles article .artifact-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75em;
+            margin: 0.5em 0 1em 0;
+            padding: 0;
+            list-style: none;
+        }
+        
+        #one.tiles article .artifact-actions li {
+            padding: 0;
+        }
+
         #one.tiles article h4 {
             font-size: 1.05em !important;
             margin-top: 1em;
@@ -429,7 +442,7 @@
                     </p>
                     
                     <h4> Project Artefacts </h4>
-                    <ul>
+                    <ul class="artifact-actions">
                         <li>
                         <a href="https://github.com/rc25essex/event-driven-order-system-capstone"
                            class="button small" target="_blank">
