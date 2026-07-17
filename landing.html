@@ -160,13 +160,16 @@
                     <h4>Summary</h4>
 
                     <p>
-                        This artefact builds on concepts introduced in Unit 1 (Object-Oriented
-                        Programming) and Unit 2 (SOLID Principles). A presentation was created
-                        to explain the core SOLID principles alongside a Python implementation
-                        demonstrating how good object-oriented design can improve maintainability,
-                        extensibility and code readability. Automated unit tests using pytest
-                        were also included to verify behaviour and demonstrate the importance of
-                        testable software design.
+						The Python application models geometric shapes such as circles, squares and rectangles using a shared `Shape` abstraction 
+						and separate subclasses for each shape. 
+						Each subclass is responsible for calculating its own area, while the main program works with the common `Shape` type rather than 
+						depending on specific implementations.
+						This design demonstrates abstraction, inheritance and polymorphism while applying the SOLID principles in practice. 
+						New shapes can be added by creating another subclass that implements `calculate_area()`, without modifying the existing shape classes.
+						The accompanying presentation explains how each SOLID principle is reflected in the implementation, 
+						and pytest unit tests verify that each shape returns the expected area.
+
+
                     </p>
                 </div>
             </article>
@@ -186,10 +189,13 @@
                     </ul>
 
                     <p>
-                        Implementing the example in Python helped me understand how design
-                        decisions affect maintainability and future enhancements. The unit
-                        tests reinforced the importance of designing classes that are easy
-                        to test and extend.
+						Developing both the presentation and the accompanying Python implementation
+						strengthened my understanding of how object-oriented design principles can improve software maintainability, 
+						extensibility and code readability.
+						Creating unit tests with pytest also reinforced the importance of verifying software behaviour 
+						and designing classes that can be tested independently. 
+						This experience provided a solid foundation for applying more advanced design patterns and software 
+						architecture concepts throughout the remainder of the module.
                     </p>
 
                     <ul class="actions">
