@@ -566,6 +566,80 @@
 		
 		    </div>
 		</article>
+			<article>
+    <div class="tile-content">
+
+        <h3 style="color:#B39DDB !important;">Unit 8: Refactoring and Code Smells</h3>
+
+        <p>
+            Collaborative discussion exercise analysing code smells and refactoring
+            a Python pricing function, supported by automated unit tests using pytest.
+        </p>
+
+        <h4>Summary</h4>
+
+        <p>
+            This artefact explored how refactoring can improve code readability and
+            maintainability without changing existing behaviour. The original pricing
+            function contained magic numbers for discount values and an
+            <code>if-elif</code> chain that handled several product types within one
+            method.
+        </p>
+
+        <p>
+            The function was refactored by replacing the hard-coded discount values
+            with named constants and a dictionary of discount factors. This produced
+            a clearer and more maintainable solution while preserving the original
+            pricing behaviour. The exercise also considered how the Strategy pattern
+            could provide a more scalable alternative if the application later
+            required more complex discount rules. Automated tests developed with
+            pytest verify the calculations for books, electronics, products without
+            discounts and collections containing multiple item types.
+        </p>
+			
+			    </div>
+			</article>
+			
+			<article>
+			    <div class="tile-content">
+			
+			        <h3>Learning &amp; Reflection</h3>
+			
+			        <h4>Key Learning</h4>
+			
+			        <ul>
+			            <li>Identifying magic numbers and conditional logic as code smells.</li>
+			            <li>Replacing hard-coded values with clearly named constants.</li>
+			            <li>Simplifying conditional logic using a dictionary lookup.</li>
+			            <li>Preserving existing behaviour while improving code structure.</li>
+			            <li>Selecting a refactoring approach appropriate to the size of the program.</li>
+			            <li>Verifying refactored behaviour using pytest.</li>
+			        </ul>
+			
+			        <p>
+			            Completing this exercise strengthened my understanding that refactoring
+			            should improve the internal structure of code without changing its
+			            external behaviour. Replacing the magic numbers and conditional chain
+			            made the pricing logic easier to understand and modify. It also highlighted
+			            the importance of choosing a proportionate solution, as the dictionary
+			            approach was sufficient for this small program while the Strategy pattern
+			            would be more appropriate for a larger system with complex discount rules.
+			            Writing automated tests provided confidence that the refactoring preserved
+			            the original calculation results.
+			        </p>
+			
+			        <ul class="actions">
+			            <li>
+			                <a href="https://github.com/rc25essex/e-portfolio/tree/portfolio-dev/artefacts/refactoring-code-smells"
+			                   class="button small"
+			                   target="_blank">
+			                    View Repository
+			                </a>
+			            </li>
+			        </ul>
+			
+			    </div>
+			</article>
         </section>
 
     </div>
