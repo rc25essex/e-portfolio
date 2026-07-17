@@ -336,10 +336,108 @@
                     View Repository
                 </a>
             </li>
-        </ul>
+        	</ul>
 
-    </div>
-</article>
+    		</div>
+		</article>
+			<article>
+    <div class="tile-content">
+
+        <h3 style="color:#FFCB6B !important;">Unit 5: Behavioural Design Patterns</h3>
+
+        <p>
+            Python implementations demonstrating the Strategy and Visitor behavioural
+            design patterns, supported by automated unit tests developed with pytest.
+        </p>
+
+        <h4>Summary</h4>
+
+        <p>
+            This artefact includes two practical exercises exploring how behavioural
+            design patterns organise communication and responsibilities between
+            objects. The Strategy pattern was applied as part of a discussion exercise
+            that required an existing payment processing system to be analysed and
+            refactored. The original implementation used a growing
+            <code>if-elif</code> chain to process Credit Card, PayPal and Bank Transfer
+            payments, creating tight coupling and requiring the
+            <code>PaymentProcessor</code> class to be modified whenever a new payment
+            method was introduced.
+        </p>
+
+        <p>
+            In the refactored version, each payment method is encapsulated within a
+            separate strategy class implementing a common
+            <code>PaymentStrategy</code> abstraction. The
+            <code>PaymentProcessor</code> delegates the payment behaviour to the
+            selected strategy, while a strategy map enables the appropriate
+            implementation to be selected dynamically. This improves readability,
+            reduces coupling and supports the Open/Closed Principle by allowing new
+            payment methods to be introduced without modifying the existing processor.
+        </p>
+
+        <p>
+            The Visitor pattern was explored through a standalone employee reporting
+            program created as part of the final assignment exercises. Developer and
+            Manager objects implement a shared employee abstraction and accept a
+            <code>ReportVisitor</code>, which produces a report appropriate to each
+            employee type. This demonstrates how a new operation can be applied across
+            related object types without placing the reporting logic directly inside
+            the employee classes. Automated unit tests using pytest verify the
+            behaviour of both implementations.
+			        </p>
+			
+			    </div>
+			</article>
+			
+			<article>
+			    <div class="tile-content">
+			
+			        <h3>Learning &amp; Reflection</h3>
+			
+			        <h4>Key Learning</h4>
+			
+			        <ul>
+			            <li>Identifying maintainability problems caused by long conditional structures.</li>
+			            <li>Applying the Strategy pattern to encapsulate interchangeable behaviours.</li>
+			            <li>Selecting payment behaviour dynamically at runtime.</li>
+			            <li>Reducing coupling between the payment processor and individual payment methods.</li>
+			            <li>Applying the Visitor pattern to introduce operations across related object types.</li>
+			            <li>Separating reporting behaviour from the employee classes it operates on.</li>
+			            <li>Verifying behavioural pattern implementations using pytest.</li>
+			        </ul>
+			
+			        <p>
+			            Completing these exercises strengthened my understanding of how behavioural
+			            design patterns assign responsibilities between objects. Analysing the
+			            payment system before refactoring helped me recognise that design patterns
+			            should be applied to solve a specific design problem rather than added
+			            without purpose. Replacing the conditional payment logic with
+			            interchangeable strategies created a clearer and more extensible design.
+			        </p>
+			
+			        <p>
+			            The Visitor exercise demonstrated a different approach by separating an
+			            operation from the object structure on which it acts. Although the program
+			            is a small standalone example rather than a full employee management
+			            system, it clearly illustrates how reporting functionality can be added
+			            without embedding it within the Developer and Manager classes. Testing
+			            both examples reinforced the importance of verifying each behaviour
+			            independently and increased my confidence in selecting an appropriate
+			            pattern for different software design problems.
+			        </p>
+			
+			        <ul class="actions">
+			            <li>
+			                <a href="https://github.com/rc25essex/e-portfolio/tree/portfolio-dev/artefacts/behavioural-design-pattern"
+			                   class="button small"
+			                   target="_blank">
+			                    View Repository
+			                </a>
+			            </li>
+			        </ul>
+			
+			    </div>
+			</article>
         </section>
 
     </div>
