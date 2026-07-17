@@ -152,15 +152,21 @@
             <h3 style="color:#66d9ff !important;">Project Overview</h3>
 
             <p>
-                This capstone project demonstrates the design and development of an
-                event-driven order processing system using Java 21, Spring Boot,
-                Apache Kafka and H2.
-            </p>
+				This capstone project demonstrates the design and implementation of an event-driven order processing system that models how customer orders 
+				can be processed asynchronously using loosely coupled services. The project was developed to consolidate the advanced object-oriented design, 
+				software architecture and secure development principles studied throughout the module while creating a realistic backend application
+				suitable for interview discussions.
+			</p>
+            <p>
+				The application models two logical microservices—an Order Service and a Fulfilment Service—within a single application for simplicity.
+				Each service has a clearly defined responsibility and communicates through Kafka events rather than direct method calls, 
+				demonstrating the principles of event-driven architecture and asynchronous messaging.
+			</p>
 
             <p>
-                The application models an Order Service and a Fulfilment Service
-                within a single Spring Boot project. Kafka is used to publish and
-                consume order lifecycle events asynchronously.
+				Customers can submit orders through a REST API, after which orders are validated, 
+				processed asynchronously and updated throughout the fulfilment lifecycle. 
+				Clients can retrieve the latest order status at any time using the application's REST endpoints.
             </p>
 
             <h4>Project Objectives</h4>
