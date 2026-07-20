@@ -1,22 +1,19 @@
-import pytest
 from employee_visitor import Developer, Manager, ReportVisitor
 
 
-def test_developer_report(capsys):
+def test_developer_report():
     developer = Developer("Alice")
     visitor = ReportVisitor()
 
-    developer.accept(visitor)
+    result = developer.accept(visitor)
 
-    captured = capsys.readouterr()
-    assert captured.out.strip() == "Developer Report: Alice"
+    assert result == "Developer Report: Alice"
 
 
-def test_manager_report(capsys):
+def test_manager_report():
     manager = Manager("John")
     visitor = ReportVisitor()
 
-    manager.accept(visitor)
+    result = manager.accept(visitor)
 
-    captured = capsys.readouterr()
-    assert captured.out.strip() == "Manager Report: John"
+    assert result == "Manager Report: John"
